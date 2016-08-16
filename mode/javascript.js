@@ -59,7 +59,9 @@ var identifierRe = "[a-zA-Z\\$_\u00a1-\uffff][a-zA-Z\\d\\$_\u00a1-\uffff]*\\b";
 var JavaScriptHighlightRules = function(options) {
     var keywordMapper = this.createKeywordMapper({
         "variable.language":
-            "Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|Proxy|"  + // Constructors
+            "Array|Boolean|Date|Function|Iterator|Number|Object|RegExp|String|Proxy|" 
+              + // CUSTOM FLOSCRIPT SYNTAX
+            "XML|URL|Object|List|HTTP|File|Date|Crypto|Control|Boolean|"  + // Constructors
             "Namespace|QName|XML|XMLList|"                                             + // E4X
             "ArrayBuffer|Float32Array|Float64Array|Int16Array|Int32Array|Int8Array|"   +
             "Uint16Array|Uint32Array|Uint8Array|Uint8ClampedArray|"                    +
@@ -71,8 +73,8 @@ var JavaScriptHighlightRules = function(options) {
             "this|arguments|prototype|window|document"                                 , // Pseudo
         "keyword":
             "const|yield|import|get|set|" +
-            "break|case|catch|continue|default|delete|do|else|finally|for|function|" +
-            "if|in|instanceof|new|return|switch|throw|try|typeof|let|var|while|with|debugger|" +
+            "break|case|catch|continue|default|delete|else|finally|function|" +
+            "if|in|instanceof|new|return|switch|throw|try|typeof|let|var|with|debugger|" +
             "__parent__|__count__|escape|unescape|with|__proto__|" +
             "class|enum|extends|super|export|implements|private|public|interface|package|protected|static",
         "storage.type":
